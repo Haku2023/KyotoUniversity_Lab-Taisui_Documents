@@ -1,3 +1,7 @@
+ ## 要求
+ **gcc-fortran,gcc-c++,git,cmake,makeのインストール(Cygwin)**
+
+
 ## Cmakeなしの実行する方法
 ```sh
 gfortran -c moudles/my_module.F90
@@ -38,4 +42,10 @@ add_library(my_modules
 ```
 3. build/の中で、hello_world という実行可能ファイルが生成されます。
 > これは、CMakeLists.txtのなかで`add_executable(hello_world main.f90)`からきています。
+
+## Visual Studio の設定について
+1. KyotoUniversity_Lab-Taisui_Documents/Cmake_SimpleProjects/imagesの中で、Visual Studio の設定方法の画像を確認できます。(1.png)
+2. 設定後Visual StudioのSolution Explorerで、二つのプロジェクトが表示されるはずです。(2.png)
+3. 利用するとき目標プロジェクトを右クリックして、reconfigure を選択して、構成を更新する。(3.png : cppプロジェクト ;5.png : fortranプロジェクト)
+4. 目標実行ファイルを選択する。(4.png : cppプロジェクト ;6.png : fortranプロジェクト)
 

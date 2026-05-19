@@ -49,3 +49,11 @@ add_library(my_modules
 3. 利用するとき目標プロジェクトを右クリックして、reconfigure を選択して、構成を更新する。(3.png : cppプロジェクト ;5.png : fortranプロジェクト)
 4. 目標実行ファイルを選択する。(4.png : cppプロジェクト ;6.png : fortranプロジェクト)
 
+## Visual Studio で CMakePresets を利用する方法
+1. Microsoft の説明によると、Visual Studio では CMakePresets の利用がデフォルトで有効になっていません。そのため、図7のように「常に CMakePresets を使用する」設定を有効にしておくことをおすすめします。
+2. 図8のようにプロジェクトを右クリックし、「CMakePresets の作成」を選択します。すると、図9のように `CMakePresets.txt` が生成されます。
+3. 添付ファイル `CMakePresets_cpp.json` および `CMakePresets_fortran.json` を参考にして、各プロジェクトの `CMakePresets.txt` を書き換えてください。これにより、図10のように「構成を変更するだけで、対応するプロジェクトが自動的に構成され、開始プロジェクトとして設定される」ようになります。
+> なお、`CMakePresets.txt` の内容は、`H-Fresh_2026_Github` の `CMakePresets.txt` も参考にしながら修正すると、実行可能な設定になります。
+
+
+

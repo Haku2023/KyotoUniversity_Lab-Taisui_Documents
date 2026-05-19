@@ -1,3 +1,5 @@
 build/
+CMakePresets.json
+CMakeUserPresets.json
 .vs/
 .DS_Store
